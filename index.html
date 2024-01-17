@@ -1,0 +1,25 @@
+﻿<html>
+<head>
+	<title>cool</title>
+</head>
+<body style="transition: background 1.5s;">
+<script>
+	const randomColor = () => '#' + Math.random().toString(16).substr(-6)
+	const changeColor = () => document.body.style.backgroundColor = randomColor()
+
+	setInterval(() => {
+	  changeColor()
+	}, 1500)
+
+	// start color animation as soon as document is ready
+	document.onreadystatechange = () => {
+	  if (document.readyState === 'complete') {
+		changeColor()
+	  }
+	}
+</script>
+<form action="ss.html">
+<input type="submit">
+</form>
+</body>
+</html>
